@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Principal
   - Enemigo
+  - Sombra
   layers:
   - Default
   - TransparentFX
@@ -15,8 +16,8 @@ TagManager:
   - UI
   - Principal
   - Enemigo
-  - 
-  - 
+  - Piso
+  - Sombras
   - 
   - 
   - 

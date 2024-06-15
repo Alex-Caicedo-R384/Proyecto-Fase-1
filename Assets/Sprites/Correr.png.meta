@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 19ecd4648092da2459a48cfb8845014c
+guid: 0ff90a16dac6ef34ba5f94d67640fe84
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,127 +136,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Personaje(PNG)_0
+      name: Correr_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 248
-        width: 152
-        height: 243
+        x: 6
+        y: 12
+        width: 90
+        height: 81
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49e99f551c08d9f49ad93b057eac8410
-      internalID: 58152303
+      spriteID: 0b9d1c64463cbf64f818aef039335241
+      internalID: 2033244316
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Personaje(PNG)_1
+      name: Correr_1
       rect:
         serializedVersion: 2
-        x: 149
-        y: 248
-        width: 148
-        height: 243
+        x: 118
+        y: 6
+        width: 88
+        height: 91
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 7}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96907284bab85bd4bad2e1dfff466d49
-      internalID: 1763980054
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Personaje(PNG)_2
-      rect:
-        serializedVersion: 2
-        x: 302
-        y: 249
-        width: 198
-        height: 243
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f993d6e20eb199447bdf164d16089bca
-      internalID: -1832509951
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Personaje(PNG)_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 10
-        width: 126
-        height: 226
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a08068c0326c7db488f39dac36637485
-      internalID: 248862722
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Personaje(PNG)_5
-      rect:
-        serializedVersion: 2
-        x: 129
-        y: 11
-        width: 174
-        height: 229
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 07798b32863d6ec40b0b2c7e41b50c2f
-      internalID: 285451196
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Personaje(PNG)_6
-      rect:
-        serializedVersion: 2
-        x: 298
-        y: 11
-        width: 202
-        height: 220
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c80d595dd386b634a9481836aa1c55e8
-      internalID: 214847073
+      spriteID: 4182710195a65a9428dbe179dd5c6d77
+      internalID: 486887458
       vertices: []
       indices: 
       edges: []
@@ -272,13 +188,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Personaje(PNG)_0: 58152303
-      Personaje(PNG)_1: 1763980054
-      Personaje(PNG)_2: -1832509951
-      Personaje(PNG)_3: 868496403
-      Personaje(PNG)_4: 248862722
-      Personaje(PNG)_5: 285451196
-      Personaje(PNG)_6: 214847073
+      Correr_0: 2033244316
+      Correr_1: 486887458
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

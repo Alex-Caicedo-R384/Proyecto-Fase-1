@@ -139,10 +139,10 @@ TextureImporter:
       name: Saltar_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 249
-        width: 195
-        height: 220
+        x: 9
+        y: 0
+        width: 91
+        height: 91
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,29 +150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee23264eb35306347ad919e621c7560f
-      internalID: 410838148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Saltar_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 11
-        width: 195
-        height: 220
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 18ac505f64636c14cb7ea490ba344aed
-      internalID: -1987481476
+      spriteID: ae3d092437e4d2f46b7903e8c9e9f524
+      internalID: -1568917645
       vertices: []
       indices: 
       edges: []
@@ -188,9 +167,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Saltar_0: 410838148
-      Saltar_1: -1793794370
-      Saltar_2: -1987481476
+      Saltar_0: -1568917645
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bdff15c4ee5670e42b503efda0f89b6b
+guid: f421bee151f17964e943a71ec2ef2a04
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,70 +134,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Personaje Corriendo(PNG)_0
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 1
-        width: 130
-        height: 303
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d8685f8833a78254684e73a2f87c33a5
-      internalID: 2119109067
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Personaje Corriendo(PNG)_1
-      rect:
-        serializedVersion: 2
-        x: 140
-        y: 1
-        width: 178
-        height: 303
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d73abc407f7cfbe439c1bed9d2802bb4
-      internalID: -24311892
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Personaje Corriendo(PNG)_2
-      rect:
-        serializedVersion: 2
-        x: 343
-        y: 1
-        width: 133
-        height: 303
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 59f3b8e518cd5734794f2531fd655fc2
-      internalID: -1615843516
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -208,10 +145,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Personaje Corriendo(PNG)_0: 2119109067
-      Personaje Corriendo(PNG)_1: -24311892
-      Personaje Corriendo(PNG)_2: -1615843516
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

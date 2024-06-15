@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 511770544d4f1fb4fa7a02272313daf3
+guid: fd814feab4af585408f5d44f28635c50
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Personaje2(PNG)_0
+      name: Moverse_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 372
-        height: 304
+        width: 136
+        height: 115
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,8 +150,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa5ad3e8ea6ffa948b6e30ebdf40db8d
-      internalID: 417044777
+      spriteID: ebd2b7ac9382ff94db698536949e05f4
+      internalID: -462501089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moverse_1
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 0
+        width: 136
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3787c597cd9d45a488f6b47550b69380
+      internalID: -66888482
       vertices: []
       indices: 
       edges: []
@@ -167,7 +188,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Personaje2(PNG)_0: 417044777
+      Moverse_0: -462501089
+      Moverse_1: -66888482
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,45 +1,105 @@
+using System.Collections;
 using UnityEngine;
 
 public class Enemigo : MonoBehaviour
 {
-    public int indiceEnLista; // Índice del enemigo en la lista de enemigos
-    private bool destruido = false; // Indica si el enemigo ha sido destruido
-    public AudioClip sonidoColision; // Sonido que se reproduce cuando el enemigo colisiona con el jugador
-    public Renderer rend; // Renderer del enemigo
+    public int indiceEnLista;
+    private bool destruido = false;
+    public AudioClip sonidoParpadeo;
+    public AudioClip sonidoDestruccion;
+    public int Vida;
 
-    private void Start()
-    {
-        rend = GetComponent<Renderer>(); // Obtiene el componente Renderer del enemigo
-    }
+    private ShadowManager shadowManager;
+
+    public float blinkTime;
+    private SpriteRenderer spriteRenderer;
+
+    public Color blinkColor1;
+    public Color blinkColor2;
+
+    private Color originalColor;
+
+    private AudioSource audioSource;
 
     public bool EstaDestruido()
     {
-        return destruido; // Devuelve si el enemigo ha sido destruido
+        return destruido;
+    }
+
+    private void Start()
+    {
+        shadowManager = FindObjectOfType<ShadowManager>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalColor = spriteRenderer.color;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
     {
-        // Aquí puedes agregar código que se ejecuta en cada frame
+        if (Vida <= 0)
+        {
+            if (sonidoDestruccion != null)
+            {
+                AudioSource.PlayClipAtPoint(sonidoDestruccion, transform.position);
+            }
+
+            Destroy(gameObject);
+            gameObject.SetActive(false);
+            FindObjectOfType<GestorEnemigos>().SiguienteEnemigo();
+            shadowManager.IncrementarSubditos();
+        }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D coll)
     {
-        if (collision.gameObject.CompareTag("Principal") && !destruido) // Si el enemigo colisiona con el jugador y no ha sido destruido...
+        if (coll.CompareTag("Principal"))
         {
-            Debug.Log("Colisión con jugador: " + this.name); // ...muestra un mensaje en la consola
-            if (sonidoColision != null) // Si hay un sonido de colisión...
+            if (coll.GetComponent<Movimiento>().VidaMin > 0)
             {
-                AudioSource.PlayClipAtPoint(sonidoColision, transform.position); // ...reproduce el sonido de colisión
-            }
+                coll.GetComponent<Movimiento>().Animator.SetTrigger("daño");
+                coll.GetComponent<Movimiento>().Daño_ = true;
 
-            GestorEnemigos gestor = FindObjectOfType<GestorEnemigos>(); // Busca el gestor de enemigos
-            if (gestor != null && indiceEnLista == gestor.ObtenerIndiceActual()) // Si el gestor existe y este enemigo es el enemigo actual...
-            {
-                gestor.SiguienteEnemigo(); // ...pasa al siguiente enemigo
-            }
+                if (transform.position.x > coll.transform.position.x)
+                {
+                    coll.GetComponent<Movimiento>().Empuje = -6;
+                    coll.transform.rotation = Quaternion.Euler(0, 0, 0);
+                }
+                else
+                {
+                    coll.GetComponent<Movimiento>().Empuje = 6;
+                    coll.transform.rotation = Quaternion.Euler(0, 180, 0);
+                }
 
-            destruido = true; // Marca el enemigo como destruido
-            Destroy(this.gameObject); // Destruye el objeto del enemigo
+                coll.GetComponent<Movimiento>().VidaMin -= 10;
+            }
+        }
+    }
+
+    public void Blink(float blinkDuration)
+    {
+        StartCoroutine(BlinkCoroutine(blinkDuration));
+    }
+
+    IEnumerator BlinkCoroutine(float blinkDuration)
+    {
+        float endTime = Time.time + blinkDuration;
+        if (sonidoParpadeo != null)
+        {
+            audioSource.PlayOneShot(sonidoParpadeo);
+        }
+        while (Time.time < endTime)
+        {
+            float t = Mathf.PingPong(Time.time, blinkTime) / blinkTime;
+            spriteRenderer.color = Color.Lerp(blinkColor1, blinkColor2, t);
+            yield return null;
+        }
+        spriteRenderer.color = originalColor;
+    }
+
+    void OnDestroy()
+    {
+        if (shadowManager != null)
+        {
         }
     }
 }
