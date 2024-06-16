@@ -10,6 +10,8 @@ public class Enemigo : MonoBehaviour
     public int Vida;
 
     private ShadowManager shadowManager;
+    private EnemigoBusca enemigoBusca;
+
 
     public float blinkTime;
     private SpriteRenderer spriteRenderer;
@@ -32,6 +34,7 @@ public class Enemigo : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
         audioSource = GetComponent<AudioSource>();
+        enemigoBusca = FindObjectOfType<EnemigoBusca>();
     }
 
     private void Update()
@@ -83,23 +86,31 @@ public class Enemigo : MonoBehaviour
     IEnumerator BlinkCoroutine(float blinkDuration)
     {
         float endTime = Time.time + blinkDuration;
+
+        if (enemigoBusca != null)
+        {
+            enemigoBusca.enabled = false;
+        }
+
         if (sonidoParpadeo != null)
         {
             audioSource.PlayOneShot(sonidoParpadeo);
         }
+
         while (Time.time < endTime)
         {
             float t = Mathf.PingPong(Time.time, blinkTime) / blinkTime;
             spriteRenderer.color = Color.Lerp(blinkColor1, blinkColor2, t);
             yield return null;
         }
-        spriteRenderer.color = originalColor;
-    }
 
-    void OnDestroy()
-    {
-        if (shadowManager != null)
+        spriteRenderer.color = originalColor;
+
+        yield return new WaitForSeconds(4f);
+
+        if (enemigoBusca != null)
         {
+            enemigoBusca.enabled = true;
         }
     }
 }
